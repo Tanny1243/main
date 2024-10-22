@@ -71,7 +71,7 @@ export default function PostPage({ route }) {
 
   return (
     <ScrollView
-      style={{ backgroundColor: "#9bdea1", marginTop: 30, padding: 20 }}
+      style={{ backgroundColor: "#ADD8E6", marginTop: 30, padding: 20 }}
     >
       <Text style={styles.new}>Add A New Item</Text>
       <Formik
@@ -162,19 +162,51 @@ export default function PostPage({ route }) {
   );
 }
 
+// const styles = StyleSheet.create({
+//   input: {
+//     borderWidth: 1,
+//     borderRadius: 10,
+//     padding: 10,
+//     marginTop: 10,
+//     marginBottom: 5,
+//     paddingHorizontal: 17,
+//     fontSize: 17,
+//   },
+//   new: {
+//     fontSize: 20,
+//     fontWeight: "bold",
+//     fontWeight: "bold",
+//   },
+// });
+
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    backgroundColor: "#ADD8E6",  // Light blue background
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
   input: {
     borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
-    marginTop: 10,
-    marginBottom: 5,
-    paddingHorizontal: 17,
+    borderColor: "#E0E0E0",  // Light gray border
+    borderRadius: 12,  // Rounded corners for a modern look
+    padding: 12,
+    marginTop: 12,
+    marginBottom: 8,
     fontSize: 17,
+    color: "#333",  // Dark text for readability
+    backgroundColor: "#FFFFFF",  // White background for contrast
+    shadowColor: "#000",  // Soft shadow for depth
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    elevation: 2,  // Subtle elevation for a refined look
   },
   new: {
     fontSize: 20,
     fontWeight: "bold",
-    fontWeight: "bold",
+    color: "#006400",  // Dark green for titles or emphasized text
+    marginTop: 15,
   },
 });

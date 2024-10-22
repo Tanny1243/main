@@ -36,7 +36,7 @@ export default Benefits = () => {
             style={{ width: 50, height: 50, borderRadius: 30 }}
           />
           <View style={{ padding: 5 }}>
-            <Text>NCFresh</Text>
+            <Text>FoodForAll</Text>
             <Text>Benefits</Text>
           </View>
         </View>
@@ -180,51 +180,103 @@ export default Benefits = () => {
   );
 };
 
+// const styles = StyleSheet.create({
+//   maincontainer: {
+//     backgroundColor: "#9bdea1",
+//   },
+//   container: {
+//     backgroundColor: "#9bdea1",
+//   },
+//   boiog: {
+//     fontSize: 25,
+//     fontWeight: "bold",
+//     textAlign: "center",
+//   },
+//   boii: {
+//     marginBottom: 50,
+//     color: "white",
+//   },
+//   boii2: {
+//     marginTop: 30,
+//     color: "white",
+//   },
+//   Vitamin: {},
+//   Lifestyle: {},
+//   container: {
+//     backgroundColor: "#ffffff",
+//     marginVertical: 10,
+//     borderRadius: 40,
+//     overflow: "hidden",
+//   },
+//   header: {
+//     paddingVertical: 30,
+//     padding: 10,
+//     borderBottomWidth: 1,
+//     borderBottomColor: "#cccccc",
+//     backgroundColor: "green",
+//   },
+//   title: {
+//     fontSize: 18,
+//     fontWeight: "bold",
+//   },
+//   content: {
+//     padding: 10,
+//   },
+//   expanded: {
+//     marginBottom: 100, // Add extra margin when expanded
+//     borderColor: "black",
+//     borderRadius: 40,
+//   },
+//   start: {
+//     flexDirection: "row",
+//     marginTop: 50,
+//   },
+// });
+
 const styles = StyleSheet.create({
   maincontainer: {
-    backgroundColor: "#9bdea1",
+    backgroundColor: "#ADD8E6",  // Light blue background
   },
   container: {
-    backgroundColor: "#9bdea1",
+    backgroundColor: "#ADD8E6",  // Consistent light blue background
+    marginVertical: 10,
+    borderRadius: 40,
+    overflow: "hidden",
   },
   boiog: {
     fontSize: 25,
     fontWeight: "bold",
     textAlign: "center",
+    color: "#006400",  // Dark green for larger text
   },
   boii: {
     marginBottom: 50,
-    color: "white",
+    color: "#7ED957",  // Light green for smaller text
   },
   boii2: {
     marginTop: 30,
-    color: "white",
+    color: "#7ED957",  // Light green for smaller text
   },
   Vitamin: {},
   Lifestyle: {},
-  container: {
-    backgroundColor: "#ffffff",
-    marginVertical: 10,
-    borderRadius: 40,
-    overflow: "hidden",
-  },
   header: {
     paddingVertical: 30,
     padding: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#cccccc",
-    backgroundColor: "green",
+    borderBottomColor: "#CCCCCC",  // Light gray for the header border
+    backgroundColor: "#006400",  // Dark green for the header background
   },
   title: {
     fontSize: 18,
     fontWeight: "bold",
+    color: "#FFFFFF",  // White text for contrast against dark green
   },
   content: {
     padding: 10,
   },
   expanded: {
-    marginBottom: 100, // Add extra margin when expanded
-    borderColor: "black",
+    marginBottom: 100,
+    borderColor: "#006400",  // Dark green border for expanded section
     borderRadius: 40,
   },
   start: {

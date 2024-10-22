@@ -33,7 +33,7 @@ export default ItemPage = ({ route }) => {
     });
   };
   return (
-    <ScrollView style={{ backgroundColor: "#9bdea1" }}>
+    <ScrollView style={{ backgroundColor: "#ADD8E6" }}>
       <View style={styles.start}>
         <Image
           source={logoImg}

@@ -39,7 +39,7 @@ export default Homepage = ({ route }) => {
     });
   };
   return (
-    <ScrollView style={{ backgroundColor: "#9bdea1" }}>
+    <ScrollView style={{ backgroundColor: "#ADD8E6" }}>
       <View style={styles.start}>
         <HeaderTab />
       </View>
@@ -55,12 +55,47 @@ export default Homepage = ({ route }) => {
   );
 };
 
+// const styles = StyleSheet.create({
+//   start: {
+//     flexDirection: "row",
+//     textAlign: "center",
+//     marginTop: 50,
+//     paddingBottom: 10,
+//   },
+//   Icons: {
+//     flexDirection: "row",
+//     justifyContent: "space-around",
+//     marginTop: 700,
+//   },
+//   Box: {
+//     justifyContent: "space-around",
+//     backgroundColor: "#006400",
+//     height: 100,
+//     width: 350,
+//     alignContent: "flex-end",
+//     borderRadius: 20,
+//     position: "relative",
+//     left: 5,
+//   },
+//   Welcome: {
+//     color: "white",
+//     fontWeight: "400",
+//     padding: 5,
+//   },
+//   Text: {
+//     color: "white",
+//     fontWeight: "200",
+//     padding: 10,
+//   },
+// });
+
 const styles = StyleSheet.create({
   start: {
     flexDirection: "row",
     textAlign: "center",
     marginTop: 50,
     paddingBottom: 10,
+    backgroundColor: "#ADD8E6",  // Light blue background
   },
   Icons: {
     flexDirection: "row",
@@ -69,22 +104,29 @@ const styles = StyleSheet.create({
   },
   Box: {
     justifyContent: "space-around",
-    backgroundColor: "#006400",
+    backgroundColor: "#006400",  // Dark green for the box
     height: 100,
     width: 350,
     alignContent: "flex-end",
     borderRadius: 20,
     position: "relative",
     left: 5,
+    shadowColor: "#000",  // Soft shadow for depth
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,  // Elevation for depth
   },
   Welcome: {
-    color: "white",
+    color: "#7ED957",  // Light green for the welcome text
     fontWeight: "400",
     padding: 5,
+    fontSize: 18,  // Slightly larger text for emphasis
   },
   Text: {
-    color: "white",
+    color: "#FFFFFF",  // White for contrast
     fontWeight: "200",
     padding: 10,
+    fontSize: 16,  // Light text size for balance
   },
 });

@@ -59,10 +59,10 @@ export default LoginScreen = ({ navigation }) => {
   };
   
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: "white", padding: 10 }}>
-      <Text style={styles.title}>Welcome back to FoodForArll!</Text>
+    <ScrollView style={{ flex: 1, backgroundColor: "#ADD8E6", padding: 10 }}>
+      <Text style={styles.title}>Welcome back to FoodForAll!</Text>
       <Text style={styles.Logintext}>Login To Continue</Text>
-      <Text>Email</Text>
+      <Text style={{color:"white"}}>Email</Text>
       <TextInput
         style={styles.input}
         placeholder="name1234@gmail.com"
@@ -74,8 +74,8 @@ export default LoginScreen = ({ navigation }) => {
       {errors.email ? (
         <Text style={styles.errorText}>{errors.email}</Text>
       ) : null}
-      <Text>Password</Text>
-      <TextInput
+      <Text style={{color:"white"}} >Password</Text>
+      <TextInput 
         style={styles.input}
         placeholder="Password"
         secureTextEntry
@@ -100,58 +100,71 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     paddingHorizontal: 20,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#F0F4F8",  // Lighter and cleaner background for a modern look
   },
   title: {
-    fontSize: 50,
+    fontSize: 42,  // Slightly smaller for cleaner, more refined look
     fontWeight: "bold",
-    marginBottom: 20,
-    marginTop: 100,
-    color: "#0C9944",
+    fontFamily: "Roboto",  // Modern, clean font family like Google uses
+    marginBottom: 30,
+    marginTop: 60,  // Optimized for better layout on mobile
+    color: "#0C9944",  // Consistent green with better contrast
     textAlign: "center",
   },
   Logintext: {
-    fontSize: 20,
-    fontWeight: "bold",
-    marginBottom: 15,
-    color: "#7ED957",
+    fontSize: 18,
+    fontWeight: "600",  // Semi-bold for readability without being too heavy
+    marginBottom: 20,
+    color: "#0C9944",  // Consistent green color
     textAlign: "center",
   },
   Logintext2: {
-    fontSize: 15,
-    fontWeight: "bold",
-    marginBottom: 5,
-    color: "#0C9944",
+    fontSize: 14,
+    fontWeight: "500",  // Medium weight for subtle emphasis
+    marginBottom: 10,
+    color: "#FFFFFF",
     textAlign: "center",
   },
   input: {
-    backgroundColor: "#7ED957",
+    backgroundColor: "#FFFFFF",  // White background for a clean input field
     width: "100%",
-    height: 40,
-    borderColor: "white",
+    height: 50,  // Slightly taller for more space to interact
+    borderColor: "#E0E0E0",  // Light gray border to match Material Design
     borderWidth: 1,
-    borderRadius: 5,
+    borderRadius: 12,  // More rounded corners for a modern feel
     color: "black",
-    paddingHorizontal: 0,
+    paddingHorizontal: 15,  // Padding inside the input for comfortable typing
     marginBottom: 20,
-    opacity: 0.75,
+    shadowColor: "#000",  // Subtle shadow for depth
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,  // Smooth shadow around input
+    elevation: 3,  // Material Design-style elevation for Android devices
   },
   button: {
-    backgroundColor: "#0C9944",
+    backgroundColor: "#0C9944",  // Consistent dark green for buttons
     width: "100%",
-    height: 40,
-    borderRadius: 5,
+    height: 50,  // Slightly taller for better touch target
+    borderRadius: 25,  // Fully rounded corners for a clean, modern look
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 20,
+    shadowColor: "#000",  // Subtle shadow for depth
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,  // Add depth on Android
   },
   buttonText: {
-    color: "white",
+    color: "#FFFFFF",  // White text for clear contrast
     fontWeight: "bold",
+    fontSize: 18,  // Slightly larger for emphasis
   },
   errorText: {
     color: "red",
     marginBottom: 10,
+    fontSize: 14,  // Consistent size for error text
+    textAlign: "center",  // Align error messages to the center
   },
 });
