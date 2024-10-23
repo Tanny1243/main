@@ -41,11 +41,11 @@ export default function ItemList({ latestItemList, navigation, route }) {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={styles.modalText}>
-              Farmer Name: {currentFarmer && currentFarmer.username ? currentFarmer.username : 'Unknown'}
+              Owner Name: {currentFarmer && currentFarmer.username ? currentFarmer.username : 'Unknown'}
             </Text>
             {currentFarmer && currentFarmer.bio && (
               <Text style={styles.modalText}>
-                Bi: {currentFarmer.bio}
+                Info: {currentFarmer.bio}
               </Text>
             )}
             <Pressable

@@ -22,7 +22,7 @@ export default ItemPage = ({ route }) => {
   const getLatestItemList = async () => {
     setLatestItemList([]);
     const querySnapShot = await getDocs(
-      collection(db, "Post"),
+      collection(db, "posts"),
       where("email", "==", email)
     );
     querySnapShot.forEach((doc) => {

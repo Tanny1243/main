@@ -49,24 +49,23 @@ export default function PostPage({ route }) {
     // No communityPost so function beneath this wont work
     const storageRef = ref(storage, "communityPost/" + Date.now() + "jpg");
 
-    // uploadBytes(storageRef, blob)
-    //   .then((snapshot) => {
-    //     console.log("Uploaded a blob or file");
-    //   })
-    //   .then((resp) => {
-    //     getDownloadURL(storageRef).then(async (downloadURL) => {
-    //       console.log(downloadURL);
-    //       value.image = downloadURL;
-    //       value.email = email;
+    uploadBytes(storageRef, blob)
+      .then((snapshot) => {
+        console.log("Uploaded a blob or file");
+      })
+      .then((resp) => {
+        getDownloadURL(storageRef).then(async (downloadURL) => {
+          console.log(downloadURL);
+          value.image = downloadURL;
+          value.email = email;
 
-    //     });
-    //   });
-    const docRef = await addDoc(collection(db, "posts"), value);
+          const docRef = await addDoc(collection(db, "posts"), value);
+          setLoading(false);
+          Alert.alert("Sucess!!!", "Post Added Successfully!!!");
+        });
+      });
+    
 
-    if (docRef.id) {
-      setLoading(false);
-      Alert.alert("Sucess!!!", "Post Added Successfully!!!");
-    }
   };
 
   return (
@@ -81,19 +80,19 @@ export default function PostPage({ route }) {
           const errors = {};
           if (!values.title) {
             console.log("Title not Present");
-            ToastAndroid.show("Title must be there ", ToastAndroid.SHORT);
+            // alert("Title must be there ", ToastAndroid.SHORT);
             errors.title = "Title Must Be There";
             return errors;
           }
           if (!image) {
             console.log("Image not Present");
-            ToastAndroid.show("Image must be there ", ToastAndroid.SHORT);
+            // alert("Image must be there ", ToastAndroid.SHORT);
             errors.image = "Image Must Be There";
             return errors;
           }
           if (!values.price) {
             console.log("Price not Present");
-            ToastAndroid.show("Price must be there ", ToastAndroid.SHORT);
+            // alert("Price must be there ", ToastAndroid.SHORT);
             errors.price = "Price Must Be There";
           }
           return errors;

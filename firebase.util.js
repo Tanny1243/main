@@ -64,6 +64,9 @@ export const authenticateUser = async ({ email, password }) => {
 };
 
 export const getUser = async (email) => {
+  // This is the most god awful piece of crap i have ever written there should be no point to this thing existing
+  email = email.replace("\"", "");
+
   const userDocRef = doc(db, "users", email);
 
   const userSnapshot = await getDoc(userDocRef);
@@ -71,5 +74,5 @@ export const getUser = async (email) => {
   if (userSnapshot.exists()) {
     const userData = userSnapshot.data();
     return userData;
-  } else throw "User does not exists";
+  } 
 };
