@@ -18,7 +18,7 @@ export default function Farmers() {
           style={{ width: 50, height: 50, borderRadius: 30 }}
         />
         <Text>
-          NCFresh
+          FoodForAll
           {
             "                                                                             "
           }

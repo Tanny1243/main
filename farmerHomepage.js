@@ -27,7 +27,7 @@ export default FarmerHomepage = ({ route }) => {
             style={{ width: 50, height: 50, borderRadius: 30 }}
           />
           <Text style={{ padding: 5 }}>
-            NCFresh
+            FoodForAll
             {
               "                                                                             "
             }

@@ -9,9 +9,9 @@ export default function HeaderTab() {
         <Image
           source={logoImg}
           style={{ width: 50, height: 50, borderRadius: 30 }}
-        />
+      l  />
         <View style={{ padding: 5 }}>
-          <Text>NCFresh</Text>
+          <Text>FoodForAll</Text>
           <Text>Home Page</Text>
         </View>
       </View>
