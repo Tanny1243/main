@@ -75,6 +75,7 @@ export default SignUpScreen = ({ navigation }) => {
   };
 
   return (
+    
     <ScrollView style={{ flex: 1, backgroundColor: "#ADD8E6", padding: 10 }}>
       <Text style={styles.title}>Welcome to FoodForAll!</Text>
 
@@ -166,7 +167,7 @@ export default SignUpScreen = ({ navigation }) => {
         style={styles.input1}
         multiline={true}
         numberOfLines={8}
-        placeholder="User Info (based on your comfort put your business address, phone #, Instagram handle or even your email. This space is so that people can reach out to you!"
+        placeholder="User (based on your comfort put your business address, phone #, Instagram handle or even your email. This space is so that people can reach out to you!"
         value={bio}
         onChangeText={(value) => setBio(value)}
       />
