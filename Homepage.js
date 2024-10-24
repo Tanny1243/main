@@ -28,7 +28,6 @@ export default Homepage = ({ route }) => {
   useEffect(() => {
     getLatestItemList();
   }, []);
-  const logoImg = require("./assets/icon.png");
 
   const getLatestItemList = async () => {
     setLatestItemList([]);
@@ -46,7 +45,7 @@ export default Homepage = ({ route }) => {
       <View style={styles.Box}>
         <Text style={styles.Welcome}> Welcome {username}!</Text>
         <Text style={styles.Text}>
-          Here's a few options of fresh produce from your local farmers!
+          Here's a few restaurants that are donating food!
         </Text>
       </View>
       <ItemList latestItemList={latestItemList} />

@@ -4,7 +4,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./Homepage";
 import Accounts from "./account";
-import Benefits from "./Benefits";
 
 const Tab = createBottomTabNavigator();
 const screenOptions = {
@@ -26,11 +25,6 @@ export default Tabs = (props) => {
   return (
     <Tab.Navigator screenOptions={screenOptions}>
       <Tab.Screen name="Home" component={HomeScreen} initialParams={userData} />
-      <Tab.Screen
-        name="Benefits"
-        component={Benefits}
-        initialParams={userData}
-      />
       <Tab.Screen
         name="Accounts"
         component={Accounts}

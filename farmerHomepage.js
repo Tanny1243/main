@@ -17,27 +17,22 @@ export default FarmerHomepage = ({ route }) => {
   const toggleExpanded = () => {
     setExpanded(!expanded);
   };
-  const logoImg = require("./assets/icon.png");
   return (
     <View style={{ backgroundColor: "#ADD8E6", height: "100%" }}>
       <View style={{ backgroundColor: "#ADD8E6" }}>
         <View style={styles.start}>
-          <Image
-            source={logoImg}
-            style={{ width: 50, height: 50, borderRadius: 30 }}
-          />
           <Text style={{ padding: 5 }}>
             FoodForAll
             {
               "                                                                             "
             }
             <Text style={{ color: "#006400", fontWeight: "bold" }}>
-              Farmer HomePage
+              Restaurant HomePage
             </Text>
           </Text>
         </View>
         <View style={styles.Box}>
-          <Text style={styles.welcomeText}> Welcome Farmer {username}!</Text>
+          <Text style={styles.welcomeText}> Welcome Manager {username}!</Text>
           <Text style={styles.text}>Welcome to the Hub of your Business!</Text>
           <Text style={styles.text}>
             Add up to your inventory and receive offers in your favorite
@@ -48,25 +43,34 @@ export default FarmerHomepage = ({ route }) => {
       <View style={[styles.container, expanded && styles.expanded]}>
         <TouchableOpacity onPress={toggleExpanded} style={styles.header}>
           <Text style={styles.title}>
-            Welcome Farmers We've got changes to make!
+            Welcome Managers We've got changes to make!
           </Text>
         </TouchableOpacity>
         {expanded && (
           <View style={styles.content}>
             <Text>
-              93% of Americans want to eat healthy, and 63% of consumers say
-              they try to eat healthy most or all of the time. While 93% of
-              Americans express the desire to eat healthy, only 10% of consumers
-              say they eat healthy ALWAYS.
-            </Text>
-            <Text>
-              More than 80% of Americans' diets are low in vegetables, fruits
-              and dairy, according to the 2020-2025 Dietary Guidelines for
-              Americans.
+            Our new app helps reduce food waste by connecting your restaurant’s unsold food with those in need. 
+            Let’s work together to make a positive impact while staying efficient! In 2023, 653,104 people experienced homelessness in the United States on a single night, Lets try to help these people out!
             </Text>
           </View>
         )}
       </View>
+      <Text style={{
+  color: "#ffffff", 
+  fontWeight: "bold", 
+  fontSize: 22, 
+  textAlign: "center", 
+  position: "absolute", 
+  bottom: 300, // Adjust this value to move it lower or higher
+  left: 0, 
+  right: 0, 
+  textShadowColor: "#000000", // Adds a subtle shadow for a more refined look
+  textShadowOffset: { width: 1, height: 1 }, 
+  textShadowRadius: 5,
+}}>
+  "We can't help everyone, but everyone can help someone" 
+  - President Ronald Reagan
+</Text>
     </View>
   );
 };
@@ -177,7 +181,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,                // How dark the shadow is
     shadowRadius: 10,                  // How blurry the shadow is
     position: "relative",              // Relative positioning
-    left: 5,                           // Moves the box slightly to the left
+    left: 20,                           // Moves the box slightly to the left
   },
   // Main container with rounded corners and hidden overflow for better design
   container: {
@@ -215,6 +219,7 @@ const styles = StyleSheet.create({
   },
   // Content padding to create space around the text inside containers
   content: {
-    padding: 15,                       // Adds padding inside content containers
+    padding: 10,                       // Adds padding inside content containers
+    
   },
 });

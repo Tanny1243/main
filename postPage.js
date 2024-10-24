@@ -128,7 +128,7 @@ export default function PostPage({ route }) {
             />
             <TextInput
               style={styles.input}
-              placeholder="Price"
+              placeholder="Quantity of Items"
               value={values.price}
               keyboardType="number-pad"
               onChangeText={handleChange("price")}

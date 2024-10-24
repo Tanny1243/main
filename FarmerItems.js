@@ -17,7 +17,6 @@ export default ItemPage = ({ route }) => {
   useEffect(() => {
     getLatestItemList();
   }, []);
-  const logoImg = require("./assets/icon.png");
 
   const getLatestItemList = async () => {
     setLatestItemList([]);
@@ -35,10 +34,6 @@ export default ItemPage = ({ route }) => {
   return (
     <ScrollView style={{ backgroundColor: "#ADD8E6" }}>
       <View style={styles.start}>
-        <Image
-          source={logoImg}
-          style={{ width: 50, height: 50, borderRadius: 30 }}
-        />
         <Text>
           FoodForAll
           {

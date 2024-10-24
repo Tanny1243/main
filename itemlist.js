@@ -58,12 +58,12 @@ export default function ItemList({ latestItemList, navigation, route }) {
         </View>
       </Modal>
       <Text style={{ fontSize: 20, fontWeight: "bold", padding: 5 }}>
-        Fresh Produce.
+        New Donations 
       </Text>
       {latestItemList && (
         <View>
           <Text style={{ fontSize: 12, fontWeight: "normal", paddingLeft: 5 }}>
-            Click Items to see farmer's info!
+            Click Items to see your post's info!
           </Text>
           <View style={styles.container}>
             {latestItemList.map((item) => {
@@ -83,8 +83,8 @@ export default function ItemList({ latestItemList, navigation, route }) {
                     />
                     <View>
                       <Text style={styles.productTitle}>{item.title}</Text>
-                      <Text style={styles.productPrice}>${item.price}</Text>
-                      <Text style={styles.sellerName}>Farmer {item.name}</Text>
+                      <Text style={styles.productPrice}>Quantity: {item.price}</Text>
+                      <Text style={styles.sellerName}>Manager {item.name}</Text>
                     </View>
                   </View>
                 </TouchableOpacity>

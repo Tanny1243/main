@@ -14,7 +14,6 @@ export default Account = ({ navigation, route }) => {
   const Logout = () => {
     navigation.replace("Login");
   };
-  const logoImg = require("./assets/icon.png");
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Account Page</Text>
